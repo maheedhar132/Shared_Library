@@ -3,6 +3,7 @@ def call(body){
 	body.resolveStrategy = Closure.DELEGATE_FIRST
 	body.delegate = config
 	body()
-    def dockerImage = config.dockerImageName
-    sh "docker run ${dockerImage}"
+    def dockerImageName = config.dockerImageName
+    echo ${dockerImageName}
+    sh "docker run ${dockerImageName}"
 }
