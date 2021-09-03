@@ -8,12 +8,12 @@ def call(body){
         node{
             stage('docker build'){
                 dockerRun{
-                    dockerImageName="${dockerImageName}"
+                    dockerImageName = "${dockerImageName}"
                 }
             }
             stage('docker scan'){
                 dockerScan{
-                    dockerImageName="${dockerImageName}"
+                    dockerImageName = "${dockerImageName}"
                 }
             }
         }
