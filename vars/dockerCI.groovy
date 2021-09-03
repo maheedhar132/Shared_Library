@@ -4,6 +4,7 @@ def call(body){
 	body.delegate = config
 	body()
         def dockerImageName = config.dockerImageName
+	print(dockerImageName)
         node{
             stage('docker build'){
                 dockerRun{
