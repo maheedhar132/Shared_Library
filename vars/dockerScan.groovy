@@ -4,6 +4,6 @@ def call(body){
 	body.delegate = config
 	body()
     def dockerImage = config.dockerImageName
-    def var = sh "docker scan ${dockerImageName}"
+    def var = sh "docker scan $dockerImageName"
     print(var)
 }
