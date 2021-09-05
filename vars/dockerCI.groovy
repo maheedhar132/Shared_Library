@@ -9,12 +9,12 @@ def call(body){
             stage('docker build'){
                 dockerRun{
 			sh "echo $dockerImageName"
-                    	dockerImageName = "${dockerImageName}"
+                    	dockerImageName = "$dockerImageName"
 			}
             }
             stage('docker scan'){
                 dockerScan{
-                    dockerImageName = "${dockerImageName}"
+                    dockerImageName = "$dockerImageName"
                 }
             }
         }
