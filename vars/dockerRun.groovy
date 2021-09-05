@@ -4,6 +4,6 @@ def call(body){
     body.delegate = config
     body()
     def dockerImageName = config.dockerImageName
-    echo "${dockerImageName}"
-    sh "docker run ${dockerImageName}"
+    sh """echo ${dockerImageName}"""
+    sh """docker run ${dockerImageName}"""
 }
