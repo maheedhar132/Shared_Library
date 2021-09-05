@@ -8,9 +8,9 @@ def call(body){
         node{
             stage('docker build'){
                 dockerRun{
-                    dockerImageName = "${dockerImageName}"
-			sh "echo ${dockerImageName}"	
-                }
+			sh "echo ${dockerImageName}"
+                    	dockerImageName = "${dockerImageName}"
+			}
             }
             stage('docker scan'){
                 dockerScan{
