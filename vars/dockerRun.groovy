@@ -5,6 +5,6 @@ def call(body){
     body()
     def dockerImageName = config.dockerImageName
     print(dockerImageName)
-    sh """echo ${dockerImageName}"""
-    sh """docker run ${dockerImageName}"""
+    sh """echo $dockerImageName"""
+    sh """docker run $dockerImageName"""
 }
