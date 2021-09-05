@@ -9,6 +9,7 @@ def call(body){
             stage('docker build'){
                 dockerRun{
                     dockerImageName = "${dockerImageName}"
+			sh "echo ${dockerImageName}"	
                 }
             }
             stage('docker scan'){
