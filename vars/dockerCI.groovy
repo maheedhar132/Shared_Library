@@ -5,11 +5,12 @@ def call(body){
 	body()
         def dockerImageName = config.dockerImageName
 	print(dockerImageName)
+	def dockerImage = "$dockerImageName"
         node{
             stage('docker build'){
                 dockerRun{
 			sh "echo $dockerImageName"
-			dockerImageName = config.dockerImageName
+			dockerImageName = dockerImage
 			}
             }
             stage('docker scan'){
