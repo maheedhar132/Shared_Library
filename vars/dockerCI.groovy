@@ -4,7 +4,7 @@ def call(body){
 	body.delegate = config
 	body()
         def dockerImageName = config.dockerImageName
-	print(dockerImageName)
+	//print(dockerImageName)
 	def dockerImage = "$dockerImageName"
         node{
             stage('docker build'){
