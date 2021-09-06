@@ -10,6 +10,7 @@ def call(body){
             stage('docker build'){
                 dockerRun{
 			sh "echo $dockerImageName"
+			print(dockerImage)
 			dockerImageName = dockerImage
 			}
             }
